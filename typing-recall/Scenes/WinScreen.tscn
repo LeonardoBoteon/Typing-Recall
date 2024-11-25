@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://bujisnvakau"]
+
+[ext_resource type="Script" path="res://Scripts/win_screen.gd" id="1_edafj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tswwe"]
+font_size = 50
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_edafj")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 331.0
+offset_top = 121.0
+offset_right = 966.0
+offset_bottom = 226.0
+text = "Parabéns, você venceu!"
+label_settings = SubResource("LabelSettings_tswwe")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 306.0
+offset_right = 818.0
+offset_bottom = 384.0
+text = "Voltar ao Menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
