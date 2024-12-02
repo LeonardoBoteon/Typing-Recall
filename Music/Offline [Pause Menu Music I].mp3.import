@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bg45me8uu3wg3"
+path="res://.godot/imported/Offline [Pause Menu Music I].mp3-bdfe2f3b1ac876689942286d03ea60d8.mp3str"
+
+[deps]
+
+source_file="res://Music/Offline [Pause Menu Music I].mp3"
+dest_files=["res://.godot/imported/Offline [Pause Menu Music I].mp3-bdfe2f3b1ac876689942286d03ea60d8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

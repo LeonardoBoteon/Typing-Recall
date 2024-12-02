@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://wavqp7jpxcsm"]
+
+[ext_resource type="Script" path="res://Scripts/lore.gd" id="1_l7565"]
+[ext_resource type="AudioStream" uid="uid://bg45me8uu3wg3" path="res://Music/Offline [Pause Menu Music I].mp3" id="2_masah"]
+[ext_resource type="Texture2D" uid="uid://dtfjqkxwamfpv" path="res://Assets/backgroundSpace_01.1.png" id="3_np8g1"]
+
+[sub_resource type="FontFile" id="FontFile_dc74r"]
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_51c8g"]
+font = SubResource("FontFile_dc74r")
+font_size = 30
+
+[node name="Lore" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l7565")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -463.0
+offset_top = -235.0
+offset_right = 463.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "O ano é 2120. Após um ataque cibernético em escala mundial todo o conhecimento tecnológico da biblioteca de Javalexandria foi apagado. Você é um dos responsáveis por conter o ataque e resgatar o conteúdo perdido. O futuro da humanidade está em suas mãos!
+
+Escreva a maior quantidade possível de termos relacionados ao tema selecionado para recuperar os dados removidos e impedir que a ameaça se espalhe, boa sorte."
+label_settings = SubResource("LabelSettings_51c8g")
+autowrap_mode = 3
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_masah")
+autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_np8g1")
+
+[node name="Button" type="Button" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 445.0
+offset_top = 485.0
+offset_right = 799.0
+offset_bottom = 567.0
+text = "Continuar"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

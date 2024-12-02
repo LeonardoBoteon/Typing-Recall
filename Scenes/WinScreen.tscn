@@ -1,0 +1,83 @@
+[gd_scene load_steps=6 format=3 uid="uid://bujisnvakau"]
+
+[ext_resource type="Script" path="res://Scripts/win_screen.gd" id="1_edafj"]
+[ext_resource type="AudioStream" uid="uid://dukvjixgbgcf5" path="res://Music/Viktor Kraus - Victory!.mp3" id="2_e0td5"]
+[ext_resource type="Texture2D" uid="uid://dtfjqkxwamfpv" path="res://Assets/backgroundSpace_01.1.png" id="3_iwh33"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tswwe"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_mdyew"]
+font_size = 30
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_edafj")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -317.5
+offset_top = 122.0
+offset_right = 317.5
+offset_bottom = 204.0
+grow_horizontal = 2
+text = "Parabéns, você venceu!"
+label_settings = SubResource("LabelSettings_tswwe")
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_e0td5")
+autoplay = true
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -399.5
+offset_top = -68.0
+offset_right = 399.5
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Graças a seus esforços o conhecimento tecnológico mundial perseverará em um futuro melhor"
+label_settings = SubResource("LabelSettings_mdyew")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_iwh33")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -182.0
+offset_top = -208.0
+offset_right = 182.0
+offset_bottom = -130.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Voltar ao Menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
